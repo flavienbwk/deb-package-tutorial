@@ -1,4 +1,4 @@
-# deb package tutorial
+# Create your debian package
 
 A simple tutorial to create and install your very own deb package.
 
