@@ -4,7 +4,7 @@ A simple tutorial to create and install your very own deb package.
 
 ## Pre-requisite
 
-Nothing but a Debian, Ubuntu or any Debian-based OS.
+Nothing but a Debian, Ubuntu or any Debian-based OS :sparkles:
 
 ## Architecture and notes
 
