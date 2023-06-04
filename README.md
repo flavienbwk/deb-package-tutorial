@@ -10,6 +10,14 @@ Nothing but a Debian, Ubuntu or any Debian-based OS.
 
 The _Mypackage_ app will open [Ubuntu's official website](https://ubuntu.com) when run.
 
+Nomenclature of our `mypackage_1.0_all` folder : `package-name_version_architecture`.
+
+- Package name : `mypackage`
+- Version : `1.0`
+- Architecture : could be `all` or a subset of [supported architectures](https://wiki.debian.org/SupportedArchitectures)
+
+Raw package architecture :
+
 ```txt
 .
 └── mypackage_1.0_all                   # Package main folder
@@ -57,6 +65,9 @@ Although there are [ways to install deb archives without sudo](https://askubuntu
     sudo gdebi -n ./mypackage_1.0_all.deb # test (requires gdebi-core)
     sudo dpkg -i ./mypackage_1.0_all.deb # install
     ```
+
+    > **Note**
+    > Uninstall with `sudo apt autoremove mypackage`
 
 You should see _Mypackage_ in your launcher :
 
