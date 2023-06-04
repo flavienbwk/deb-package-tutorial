@@ -75,7 +75,34 @@ You should see _Mypackage_ in your launcher :
 
 ## Install from the APT CLI
 
-The first option is the easiest : we can install packages locally.
+The first option is the easiest : we can [install packages locally](https://rpmdeb.com/devops-articles/how-to-create-local-debian-repository/).
+
+1. Create a folder where our repository will be located and move our `.deb` package inside
+
+    ```bash
+    mkdir -p ./mirror/pool
+    cp ./mypackage_1.0_all.deb ./mirror/pool/
+    ```
+
+2. Create the `Packages` index file
+
+    ```bash
+    cd ./mirror
+    dpkg-scanpackages -m ./pool > Packages
+    ```
+
+3. Add the directory to your system's sources
+
+    ```bash
+    echo "deb [trusted=yes] file:/path/to/repository/mirror /" | sudo tee /etc/apt/sources.list.d/mypackage.list
+    ```
+
+4. Update your packages definition and install
+
+    ```bash
+    sudo apt update
+    sudo apt install mypackage
+    ```
 
 Locally-installed repositories can then be served from a simple Apache server [on your own machine](https://github.com/flavienbwk/apt-mirror-docker).
 
