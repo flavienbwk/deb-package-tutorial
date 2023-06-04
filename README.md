@@ -49,7 +49,7 @@ Maintainer: flavienbwk
 Description: A sample package...
 ```
 
-Although there are [ways to install deb archives without sudo](https://askubuntu.com/a/342/611107), most deb packages are designed to be installed system-wide. This means that _preinst_ and _postinst_ scripts or any other binary included in the archive can run without any restriction on one's system. Triple-check your scripts and be careful when sharing so you don't break someone's computer.
+Although there are [ways to install deb archives without sudo](https://askubuntu.com/a/342/611107), most deb packages are designed to be installed system-wide. This means that _preinst_ and _postinst_ scripts or any other binary included in the archive can run without any restriction on one's system (see [_Snap packages_](#a-word-about-snap-packages) for an alternative). Triple-check your scripts and be careful when sharing so you don't break someone's computer.
 
 ## Getting started
 
@@ -100,4 +100,4 @@ APT is the traditional package management system used by Debian and its derivati
 
 [Snap, introduced by Canonical in 2014](https://snapcraft.io/docs/creating-a-snap), is a newer package manager designed to provide easier package distribution across different Linux distributions. It bundles dependencies within each `.snap` package, leading to larger package sizes but mitigating "dependency hell". This comes useful especially in offline systems.
 
-The key differences is that snap packages focus on cross-distribution compatibility and self-containment, potentially better security through [package sandboxing](https://snapcraft.io/docs/creating-a-snap), and automatic updates. APT, on the other hand, relies on system-wide libraries, which makes packages smaller but can cause dependency issues. It offers finer control over updates but requires more manual maintenance.
+The key differences is that snap packages focus on cross-distribution compatibility and self-containment, potentially better security through [package sandboxing](https://snapcraft.io/docs/creating-a-snap), and automatic updates. APT, on the other hand, relies on system-wide libraries, which makes packages smaller but can cause dependency issues.
