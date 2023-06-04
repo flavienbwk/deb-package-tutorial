@@ -1,0 +1,21 @@
+[Desktop Entry]
+
+# version of the Desktop Entry Specification (not package's version)
+Version=1.0
+
+Name=Mypackage
+GenericName=MPKG
+Icon=/usr/share/icons/mypackage.xpm
+Comment=Go to the Ubuntu official website.
+
+# Defines the command or script to be executed when starting the app.
+Exec=/opt/mypackage/open_link.sh
+# Specifies an alternative executable to check for the presence of the app.
+TryExec=/opt/mypackage/open_link.sh
+
+# Should this app run in terminal ?
+Terminal=false
+
+Type=Application
+Categories=Utility;
+Keywords=Ubuntu;URL;

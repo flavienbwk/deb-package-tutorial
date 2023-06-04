@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Idempotent post-install script to make sure everything is correctly installed and configured
+
+echo "mypackage: This is a postinst message"

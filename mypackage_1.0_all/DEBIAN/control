@@ -1,0 +1,8 @@
+Package: mypackage
+Version: 1.0
+Architecture: all
+Essential: no
+Priority: optional
+Depends: curl,zenity
+Maintainer: flavienbwk
+Description: A sample package creating a shortcut that triggers a bash script opening a link to the official Ubuntu website
